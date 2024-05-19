@@ -15,9 +15,14 @@ import com.api.produto.modelo.RespostaModelo;
 import com.api.produto.repositorio.ProdutoRepositorio;
 
 @RestController
-@RequestMapping("/api")
+	
 public class ProdutoControle {
-
+	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String Mensagem() {
+		return "<h1 style='color:red'>Tela inicial</h1>" +"<br>"+ "<h2>- Para visualizar todos os produtos, adicione o endPoint: /produtos</h2>";
+	}
+	
 	//Ações
 	@Autowired
 	private ProdutoRepositorio acoes;
